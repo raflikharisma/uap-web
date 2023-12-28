@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+
+
+  <body>
+    <div class="container">
+        <div class="tabel-barang">
+            <table>
+              <thead>
+                <tr>
+                  <td>Kode</td>
+                  <td>Nama Barang</td>
+                  <td>Harga</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>001</td>
+                  <td>Kecap Manis</td>
+                  <td>10.000</td>
+                </tr>
+                <tr>
+                  <td>002</td>
+                  <td>Teh Botol</td>
+                  <td>20.000</td>
+                </tr>
+                <tr>
+                  <td>003</td>
+                  <td>Nescafe</td>
+                  <td>30.000</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+    
+        <div class="input">
+            <table>
+              <tr>
+                <td><label for="">Masukkan Input</label></td>
+                <td>:</td>
+                <td><input type="text" id="inputKode" placeholder="Input Kode" /></td>
+              </tr>
+              <tr>
+                <td><label for="">Input Kode Barang</label></td>
+                <td>:</td>
+                <td><input type="text" id="inputBarang" placeholder="Input Barang" /></td>
+              </tr>
+              <tr>
+                <td colspan="3"><button onclick="chooseData()"><span>SUBMIT</span></button></td>
+              </tr>
+            </table>
+        </div>
+    </div>
+  </body>
+
+  <script>
+
+    item = {
+        "Kecap Manis" : 10000,
+        "Teh Botol" : 20000,
+        "Nescafe" : 30000
+    }
+
+    chooseData = () => {
+        let kode = parseInt(document.getElementById("inputKode").value);
+        let barang = parseInt(document.getElementById("inputBarang").value);
+        let b = barang * `${item["Kecap Manis"]}`
+        let temp = 0
+        let bayar = 0
+        if(kode === 1){
+            temp = barang * `${item["Kecap Manis"]}`
+            alert(`Total Harga : ${temp}`)
+            bayar = prompt("Masukkan duit : ")
+            alert(` ${kembalian(temp,bayar)}`)
+
+        }
+        else if(kode === 2){
+            temp = barang * `${item["Teh Botol"]}`
+            alert(`Total Harga : ${temp}`)
+            bayar = prompt("Masukkan duit : ")
+            alert(` ${kembalian(temp,bayar)}`)
+            
+        }
+        else  if(kode === 3){
+            temp = barang * `${item["Nescafe"]}`
+            alert(`Total Harga : ${temp}`)
+            bayar = prompt("Masukkan duit : ")
+            alert(`${kembalian(temp,bayar)}`)
+            
+        }else{
+            return alert("Tidak ada barang")
+            alert(` ${kembalian(temp,bayar)}`)
+        }
+    }
+
+    kembalian = (total, input) =>{
+        if(total > input){
+            return "Gapunya duit!"
+        }else if(total == input){
+            return "Thank youu!"
+        }else{
+            let bin = input - total
+            return `Kembalian anda :  ${bin}, Thank youu`
+        }
+    }
+
+
+
+  </script>
+</html>

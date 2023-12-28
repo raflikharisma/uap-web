@@ -1,0 +1,67 @@
+
+thead,
+tr,
+td {
+  border: 1px solid black;
+  border-spacing: 0px; 
+  box-sizing: none;
+}
+
+
+
+.tabel-barang{
+
+    display: flex;
+    padding-right: 20px;
+   
+
+}
+
+.tabel-barang table{
+
+    width: 300px;
+    height: 150px;
+    border: 1px solid black;
+    border-spacing: 0px; 
+ 
+    
+}
+
+
+.tabel-barang td {
+    padding: 10px;
+}
+
+.input table{
+    border: 1px solid black;
+    border-spacing: 0px; 
+    
+}
+.input td{
+    padding: 10px;
+    
+}
+.input table{
+    border: 1px solid black;
+    border-spacing: 0px; 
+    
+}
+
+.input button {
+    
+    width: 400px;
+    text-align: center;
+
+
+}
+
+
+.container{
+    width: 70%;
+    display: flex;
+    margin-top: 10rem;
+    margin-left: 31rem;
+}
+
+
+
